@@ -46,4 +46,10 @@ class TaxCalculator
     {
         return $amount * $this->getRealTaxValue($tax);
     }
+
+    public function calculateSlytherinPayTax(float $amount, float $tax, float $total): float
+    {
+        return $amount + $this->getRealTaxValue($tax) - $total;
+    }
+
 }
