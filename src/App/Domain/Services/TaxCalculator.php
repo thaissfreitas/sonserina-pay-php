@@ -52,4 +52,8 @@ class TaxCalculator
         return $amount + $this->getRealTaxValue($tax) - $total;
     }
 
+    public function calculateTotalTax(float $slytherinPayTax, float $tax): float
+    {
+        return $slytherinPayTax + $this->getRealTaxValue($tax);
+    }
 }
